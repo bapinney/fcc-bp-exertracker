@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Exercise Tracker | Free Code Camp</title>
+      <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATlSURBVFhH7ZhdTFtlGMdxXph4Ybz0Qq+80AsvjDHeLiaOllJomWFRol6wxBtNwHnhR4hMN0ZPvxlMYM5lRIMDrESywUC+3Gh7zmkrMIq4jTKgMBhbR4FSWvrx+DyHcwpM7IYU6gX/5J+cvO/5+PG+z/9935Kxr32lQJkn+BfURr5NoWVXyCoD355ZZn1Z7E6vCE6pZ/013d5I/50QkM90eSM5Om5BrmGfF29Ln9Qmvo2AbvvjsNHUlmfgWsXb0icFw4YGpsOb4Mg0kjTd4m3p0/8ekAKx5RR3TkbUBv4S3bNWp3ybnGFXyAr9HoaIPkSB+LZrMhESulbqWD+FhOCytKz/WJM3YrauALmoyRtT6LjFPQsRQVAgxGUmmGvkL0sfp5ErRrgaZww2urhpMp6jT3GIZEzfSzg9F7J1/KxMY4+qjDxk61hQGRweCUiu7XsR204rDXy9rJxVZWGNmq0hAaqg2g0FNW7hmkZSzthTV6NyLVuM07KMf3lU93sA3q8dgvN9d2B4bhWqu72Qo+eDWF8fKrVc4KuWiZiucxaOVP6xhG2xBCDC7Qpglo49mVfhChj7gsLLybkGXoCTQtHgmENIDjTtM9A6Ghd8jlsAnGL45Gdv4jnJxY1Yp/q1EO1IElyFbW0UJH9w1g111plNyW1zz8PbZidUXfNBnXMJcvVc3NwxHqO2Ty1eYdTIOAsRCs6OQ/JvcGRt7xKoTU4wdUzALV80Adl7awnyK1w0mvHvr03HqI0bD8KRClcUyySKNRnEOk6E6D8rGZzkkkv3hKkuONMPHSP+BCQ/GYR67q5wffN+FD6uGw7gfc35jY1Piq/fgQCekGvtlY+C+6b9ASaYizMdM1B11Qf5lS443jwK7rvrdZlyOHkp+0yO3uHBtQy+vuLbEoycgNsQiIuDQcgz8XGVkYvh6MWvz4RTC3eozPqKUsdNH2vwRKjIqb5OdfofC84yHKYRjCm03NW3GO51XB8HaI/ONXC1O4MDOHDoJPdqJmM9la3lQoauubj00Wrrg39APgpOfOv2lamxvSHX2I5itE/kGR0WTFgA16AYLpSQg0X+Xs1g/AdXIPFRyRJkWZd/9+DURofpnSrXYonl5vLp3ybilC7cpqB+IAgtN6KbgLYyQaqMDjo6pR6OhMfxgHt2PVlkAtwIkcxUj0rcIb785XaiLWVwJCzYqWuewLYBG90h+MwyFsaRCxf9NBqT2lMKR8o1cudqe6fiBMZPBAW4x7FCa1+lEwkeSLvMPfd2B46ECVV/dGFoQRo9/CA0DoU2jdbDbsL+o+eHlzFMRjyNFGKIluiZlMORDpp6ns3W2cOjvpgAWPTjnyCNSDI3XA9RaudpZ1Hq+CuU+JTDScIVfkTaK2t7puALy3rBJ/PaVHPPyRj7iLzcdlF8XeqFOwRjah+PEmDnXwugxpPwwzWX1OX24+KrdkeZDPtm4XeDfgKkDVzBYABKnU+L3YIIRNox6Fps3hvJK1qfwuUiNDIXEaa58OygX87YDordgtIKSDps5tlfB30CIHN5bBVHsUTsEpR2QFzXPi9rGQsRYHP/fThscmxKZNoBZYzttXernIsESP+qwDVuQewSlHbA0lI4QL/2abnpvrFIgD6xS1DaAUlZDKfEw8M8wSnK2WyZxuYhmOS2ecTH97Wv7Ssj428pbqVgN7pGBAAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>Exercise tracker</h1>
+          <form action="/api/exercise/new-user" method="post">
+            <h3>Create a New User</h3>
+            <p><code>POST /api/exercise/new-user</code></p>
+            <input id="uname" type="text" name="username" placeholder="username">
+            <input type="submit" value="Submit">
+          </form>
+          <form action="/api/exercise/add" method="post">
+            <h3>Add exercises</h3>
+            <p><code>POST /api/exercise/add</code></p>
+            <input id="uid" type="text" name="userId" placeholder="userId*">
+            <input id="desc" type="text" name="description" placeholder="description*">
+            <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+            <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
+            <input type="submit" value="Submit">
+          </form>
+          <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
+          <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+          <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+      </div>
+   </body>
+
+</html>
